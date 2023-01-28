@@ -15,9 +15,9 @@
 }
 
 /* Code block styles */
-.code-highlight {
+/* .code-highlight {
   @apply float-left min-w-full;
-}
+} */
 
 .code-line {
   @apply -mx-4 block border-l-4 border-transparent pl-4 pr-4;
@@ -48,7 +48,7 @@
  * Ported by Sara vieria [@SaraVieira]
  * Added by Souvik Mandal [@SimpleIndian]
  */
-.token.comment,
+/* .token.comment,
 .token.prolog,
 .token.cdata {
   color: rgb(99, 119, 119);
@@ -137,4 +137,4 @@
 
 .token.table {
   display: inline;
-}
+} */

@@ -12,6 +12,59 @@ import Analytics from "@components/analytics"
 import LayoutWrapper from "@components/LayoutWrapper"
 import { ClientReload } from "@components/ClientReload"
 
+import localFont from "@next/font/local"
+
+const customFont = localFont({
+  src: [
+    {
+      path: "../fonts/TT Commons Thin.woff2",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../fonts/TT Commons ExtraLight.woff2",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../fonts/TT Commons Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../fonts/TT Commons Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/TT Commons Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../fonts/TT Commons DemiBold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../fonts/TT Commons Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../fonts/TT Commons ExtraBold.woff2",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../fonts/TT Commons Black.woff2",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-custom",
+})
+
 const isDevelopment = process.env.NODE_ENV === "development"
 const isSocket = process.env.SOCKET
 
@@ -23,9 +76,11 @@ export default function App({ Component, pageProps }: any) {
       </Head>
       {isDevelopment && isSocket && <ClientReload />}
       <Analytics />
-      <LayoutWrapper>
-        <Component {...pageProps} />
-      </LayoutWrapper>
+      <main className={`${customFont.variable} font-sans`}>
+        <LayoutWrapper>
+          <Component {...pageProps} />
+        </LayoutWrapper>
+      </main>
     </ThemeProvider>
   )
 }
