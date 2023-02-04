@@ -1,18 +1,10 @@
 alexvyber.dev {
-        # handle_path /backend* {
-        #         reverse_proxy strapi:1337
-        # }
-
         handle_path /* {
                 reverse_proxy localhost:3000
         }
 }
 
 club.alexvyber.dev {
-        # handle_path /backend* {
-        #         reverse_proxy strapi:1337
-        # }
-
         handle_path /* {
                 reverse_proxy localhost:8888
         }
