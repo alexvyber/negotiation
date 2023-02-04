@@ -1,0 +1,7 @@
+.git
+.next
+.turbo
+node_modules
+Dockerfile
+Dockerfile.prod
+prod-without-multistage.Dockerfile
