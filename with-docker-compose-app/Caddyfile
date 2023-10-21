@@ -1,7 +1,14 @@
 alexvyber.dev {
-	reverse_proxy localhost:3000
+	reverse_proxy localhost:3040
 }
 
-club.alexvyber.dev {
-	reverse_proxy localhost:8888
+ba.alexvyber.dev {
+ 	handle_path /backend* {
+		reverse_proxy localhost:5000
+	}
+
+	handle_path /* {
+		reverse_proxy localhost:3000
+	}
 }
+

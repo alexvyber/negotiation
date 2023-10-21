@@ -1,0 +1,9 @@
+ckchain-analitika.ru {
+        handle_path /backend* {
+                reverse_proxy localhost:1337
+        }
+
+        handle_path /* {
+                reverse_proxy localhost:3000
+        }
+}

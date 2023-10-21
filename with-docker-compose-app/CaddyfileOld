@@ -1,0 +1,33 @@
+alexvyber.dev {
+	reverse_proxy localhost:3020
+}
+
+club.alexvyber.dev {
+	reverse_proxy localhost:8888
+}
+
+pro.alexvyber.dev {
+	handle_path /backend* {
+                reverse_proxy localhost:1337
+        }
+
+        handle_path /* {
+                reverse_proxy localhost:3001
+        }
+}
+
+ba.alexvyber.dev {
+	handle_path /backend* {
+                reverse_proxy localhost:1337
+        }
+
+        handle_path /* {
+                reverse_proxy localhost:5000
+        }
+}
+
+#katzen.alexvyber.dev {
+#    handle_path /* {
+#               reverse_proxy localhost:4000
+#       }
+#}
